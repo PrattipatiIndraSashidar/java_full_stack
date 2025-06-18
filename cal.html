@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: gold;">
+    <center>
+        <h1 style="background-color: chocolate;">simple calculator</h1>
+        <input type="number" id="first">
+        <input type="number" id="second">
+        <br>
+        <button onclick="add()" style="background-color: blue;">add</button>
+        <button onclick="sub()" style="background-color: blueviolet;">sub</button>
+        <button onclick="mul()" style="background-color: brown;">mul</button>
+        <button onclick="div()" style="background-color: aqua;">div</button>
+        <h1 id="display" style="background-color: chartreuse;"></h1>
+    </center>
+</body>
+<script>
+  function add(){
+    let a=Number(document.getElementById("first").value);
+    let b=Number(document.getElementById("second").value);
+    document.getElementById("display").innerHTML=a+b;
+
+  }
+  function sub(){
+     let a=Number(document.getElementById("first").value);
+    let b=Number(document.getElementById("second").value);
+    document.getElementById("display").innerHTML=a-b;
+  }
+   function mul(){
+     let a=Number(document.getElementById("first").value);
+    let b=Number(document.getElementById("second").value);
+    document.getElementById("display").innerHTML=a*b;
+  }
+   function div(){
+     let a=Number(document.getElementById("first").value);
+    let b=Number(document.getElementById("second").value);
+    document.getElementById("display").innerHTML=b==0? "cannot divide by zero":a/b;
+  }
+</script>
+
+</html>
